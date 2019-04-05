@@ -80,6 +80,8 @@ public class GetPostTest {
                 System.out.println(inputLine);
             }
             
+            in.close();
+            
         } catch (IOException ex) {
             ex.printStackTrace();
         }
