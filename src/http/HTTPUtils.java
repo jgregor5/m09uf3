@@ -24,7 +24,9 @@ public class HTTPUtils {
     public static Map<String, String> parseCookies(String cookieHeaderValue) {
         
         Map<String, String> result = new HashMap<>();
-        
+        if (cookieHeaderValue == null) {
+            return result;
+        }
         String[] sets = cookieHeaderValue.split(";");        
         for (String set: sets) {
             String[] nameValue = set.split("=");
