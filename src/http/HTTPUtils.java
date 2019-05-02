@@ -44,6 +44,9 @@ public class HTTPUtils {
     public static Map<String, String> parseParameters(String query) {
         
         Map<String, String> result = new HashMap<>();
+        if (query == null) {
+            return result;
+        }
         
         String[] pairs = query.split("&");                        
         for (String pair : pairs) {
